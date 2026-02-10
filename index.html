@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+      color: #4a0033;
+      text-align: center;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #b30059;
+    }
+
+    h2 {
+      color: #800040;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.2em;
+      line-height: 1.7;
+    }
+
+    .heart {
+      font-size: 2.8em;
+      animation: pulse 1.5s infinite;
+      margin: 10px 0 20px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    .photos img {
+      width: 220px;
+      border-radius: 18px;
+      margin: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    footer {
+      padding: 50px 20px;
+      font-size: 1.1em;
+      color: #660033;
+    }
+
+    button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 30px;
+      background: #ff5c8a;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bgMusic");
+
+  document.addEventListener("click", () => {
+    music.play();
+  }, { once: true });
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  }
+</script>
+
+<section>
+  <h1>Happy Birthday, My Love 🎂</h1>
+  <div class="heart">❤️</div>
+  <p>🎧 Tap anywhere — this page sounds better with music</p>
+</section>
+
+<section>
+  <h2>A Letter From My Heart 💌</h2>
+  <p>
+    Happy Birthday, my love.  
+    Even though distance keeps us apart today, my heart is right there with you.
+    You are my happiness, my safe place, and my favorite person.
+    I made this just for you — so you could open it and feel how much you mean to me.
+  </p>
+</section>
+
+<section>
+  <h2>Our Memories 📸</h2>
+  <div class="photos">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+  <p>Every picture here holds a piece of my heart.</p>
+</section>
+
+<section>
+  <h2>Why I Love You 💕</h2>
+  <p>
+    • Your smile fixes my worst days<br>
+    • You understand me without words<br>
+    • You make distance worth it<br>
+    • You are simply… you ❤️
+  </p>
+</section>
+
+<footer>
+  No matter the distance, you are always with me.<br>
+  Happy Birthday once again, my girl 💖
+</footer>
+
+<button onclick="toggleMusic()">🎵 Music</button>
+
+</body>
+</html>
