@@ -34,10 +34,10 @@
     }
 
     p {
-      max-width: 750px;
+      max-width: 780px;
       margin: auto;
       font-size: 1.2em;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .heart {
@@ -53,19 +53,19 @@
     }
 
     .story {
-      margin-top: 50px;
+      margin-top: 55px;
     }
 
     .story img {
       width: 260px;
       border-radius: 20px;
-      margin: 15px 0;
+      margin: 18px 0;
       box-shadow: 0 8px 18px rgba(0,0,0,0.3);
     }
 
     footer {
-      padding: 50px 20px;
-      font-size: 1.1em;
+      padding: 55px 20px;
+      font-size: 1.15em;
       color: #660033;
     }
 
@@ -88,31 +88,33 @@
 <body>
 
 <!-- 🎵 Background Music -->
-<audio id="bgMusic" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgMusic" src="music.mp3" loop></audio>
+
+<button id="musicBtn">▶ Play Music</button>
 
 <script>
   const music = document.getElementById("bgMusic");
+  const btn = document.getElementById("musicBtn");
 
-  function toggleMusic() {
+  btn.addEventListener("click", () => {
     if (music.paused) {
-      music.play().catch(err => {
-        alert("Tap once on the page, then press Music 🎵");
-      });
+      music.play();
+      btn.innerText = "⏸ Pause Music";
     } else {
       music.pause();
+      btn.innerText = "▶ Play Music";
     }
-  }
+  });
 </script>
-
 
 <!-- 🎂 HERO -->
 <section>
   <h1>Happy Birthday, My Love 🎂</h1>
   <div class="heart">❤️</div>
-  <p>🎧 Tap the Music button to play the song</p>
-</p>
+  <p>
+    🎧 Please press <strong>Play Music</strong> first.<br>
+    This page was made to be felt, not just seen.
+  </p>
 </section>
 
 <!-- 💌 LETTER -->
@@ -120,9 +122,16 @@
   <h2>A Letter From My Heart 💌</h2>
   <p>
     Happy Birthday, my love.  
-    Even though distance keeps us apart today, my heart is right there with you.
-    You are my happiness, my peace, and my favorite person.
-    I made this just for you — so you could open it and feel how much you mean to me.
+    Today isn’t special just because it’s your birthday —
+    it’s special because <strong>you</strong> exist.
+    Even though distance keeps us apart right now,
+    my heart has never felt closer to anyone.
+    <br><br>
+    You are my comfort, my happiness, and the person I think of
+    in the quiet moments of every day.
+    I couldn’t be there to hold your hand,
+    so I made this — something you could open and feel.
+    This is my way of being with you today.
   </p>
 </section>
 
@@ -130,16 +139,22 @@
 <section>
   <h2>Every Side of You ❤️</h2>
   <p>
-    Loving you isn’t about one version of you —  
-    it’s about every side that makes you… you.
+    I didn’t fall in love with just one version of you.
+    I fell in love with <strong>every side</strong> —
+    the loud ones, the quiet ones, the silly ones,
+    and even the difficult ones.
   </p>
 
   <div class="story">
     <h3>The Photo I Fell For 💘</h3>
     <img src="fell.jpeg">
     <p>
-      This is the smile that made my heart pause.
-      I didn’t know it then — but I was already yours.
+      This photo changed something in me.
+      I still remember the feeling —
+      that quiet moment where my heart just *knew*.
+      I didn’t plan it, I didn’t expect it,
+      but from that moment on,
+      you became someone special to me.
     </p>
   </div>
 
@@ -147,8 +162,11 @@
     <h3>Your Funny Side 😂</h3>
     <img src="funny.jpeg">
     <p>
-      This is the you that makes me laugh without trying.
-      My favorite kind of happiness.
+      This is the side of you that makes everything lighter.
+      You make me laugh without trying,
+      and even on my worst days,
+      you somehow manage to pull a smile out of me.
+      Loving you is fun — and that’s my favorite part.
     </p>
   </div>
 
@@ -156,8 +174,12 @@
     <h3>Your Angry (But Cute) Side 😤❤️</h3>
     <img src="angry.jpeg">
     <p>
-      Even when you’re angry, you’re adorable.
-      And somehow… I love you even more.
+      Even when you’re angry,
+      there’s something honest and real about you.
+      You care deeply, you feel deeply —
+      and that’s beautiful.
+      I don’t love you despite this side,
+      I love you <strong>because</strong> of it.
     </p>
   </div>
 
@@ -165,8 +187,11 @@
     <h3>You in Traditional ✨</h3>
     <img src="traditional.jpeg">
     <p>
-      Grace. Beauty. Confidence.
-      This is the side of you I admire so deeply.
+      This photo reminds me how graceful and strong you are.
+      There’s confidence in the way you carry yourself,
+      and a quiet beauty that doesn’t need attention.
+      This is the side of you that makes me admire you
+      even more every day.
     </p>
   </div>
 
@@ -174,8 +199,11 @@
     <h3>Our First Insta Story 📲</h3>
     <img src="insta.jpeg">
     <p>
-      This story meant more than likes or views.
-      It was the moment we quietly became *us*.
+      This wasn’t just a story —
+      it was a small moment that meant a lot to me.
+      It felt like a beginning,
+      like the world was seeing a tiny piece of *us*.
+      I still smile every time I think about it.
     </p>
   </div>
 
@@ -183,19 +211,25 @@
     <h3>An Old Photo 🕰️</h3>
     <img src="old.jpeg">
     <p>
-      Looking at this reminds me how far we’ve come.
-      And how much I still choose you — every day.
+      This photo takes me back.
+      To where things were simpler,
+      where everything was just starting.
+      Looking at this reminds me how far we’ve come —
+      and how much I still choose you,
+      today and always.
     </p>
   </div>
 </section>
 
 <!-- 💖 FOOTER -->
 <footer>
-  No matter the distance, you are always with me.<br>
-  Happy Birthday once again, my girl 💖
+  No matter how far apart we are,<br>
+  you are always with me — in my heart, in my thoughts,
+  and in everything I do.
+  <br><br>
+  Happy Birthday, my love 💖<br>
+  I’m so grateful for you.
 </footer>
-
-<button onclick="toggleMusic()">🎵 Music</button>
 
 </body>
 </html>
