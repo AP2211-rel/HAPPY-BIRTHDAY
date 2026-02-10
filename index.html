@@ -95,18 +95,17 @@
 <script>
   const music = document.getElementById("bgMusic");
 
-  document.addEventListener("click", () => {
-    music.play();
-  }, { once: true });
-
   function toggleMusic() {
     if (music.paused) {
-      music.play();
+      music.play().catch(err => {
+        alert("Tap once on the page, then press Music 🎵");
+      });
     } else {
       music.pause();
     }
   }
 </script>
+
 
 <!-- 🎂 HERO -->
 <section>
